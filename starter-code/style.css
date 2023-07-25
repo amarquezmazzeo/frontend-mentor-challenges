@@ -1,0 +1,329 @@
+/* -------------------------------------------------------------------------- */
+/*                                    SETUP                                   */
+/* -------------------------------------------------------------------------- */
+
+
+/* ------------------------------- Font Import ------------------------------ */
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(./assets/fonts/manrope/static/Manrope-Regular.ttf) format('truetype');
+}
+
+/* ------------------------------ Body Override ----------------------------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', serif;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* ------------------------------- Typography ------------------------------- */
+
+p {
+    font-family: 'Manrope', serif !important;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    color: white;
+    padding-top: 5rem;
+    font-size: 3rem;
+}
+
+h1 span {
+    text-decoration: underline;
+    text-decoration-color: #44FFA1;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  Sections                                  */
+/* -------------------------------------------------------------------------- */
+
+
+/* ------------------------------- Navigation ------------------------------- */
+
+
+nav {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 1114px;
+    text-decoration: underline;
+    text-decoration-color: #44FFA1;
+}
+
+
+@media (min-width: 700px) {
+    main {
+        height: 50vw; 
+    }
+    .hero-image {
+        max-width: 40vw;
+        transform: translate(0, 8vw);
+    }
+  }
+
+
+
+/* ---------------------------------- Main ---------------------------------- */
+
+
+main {
+    position: relative;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: -1rem;
+    overflow: visible;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    height: 150vw;
+}
+
+main::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 140vw;
+    height: 100vw;
+    background: #24053E;
+    border-radius: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%) scale(2.5);
+}
+
+.hero-image {
+    max-width: 80vw;
+    width: auto;
+    height:auto;
+    transform: translate(0, 55px);
+    transform-origin: bottom;
+    margin-bottom: -80px;
+}
+
+@media (min-width: 370px) {
+    main {
+        height: 128vw; 
+    }
+
+    .hero-image {
+        transform: translate(0, 20vw);
+        
+    }
+  }
+
+  @media (min-width: 700px) {
+    main {
+        height: 50vw; 
+    }
+    .hero-image {
+        max-width: 40vw;
+        transform: translate(0, 8vw);
+    }
+  }
+
+.insights {
+    position: relative;
+    overflow-x: clip;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em 2em;
+    margin-top: 12em;
+    margin-bottom: 4em;
+    max-width: 100%;
+    height: 100%;
+}
+
+.items {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-width: 1114px;
+}
+
+.insights::before {
+    z-index: -2;
+    content: '';
+    position: absolute;
+    bottom: initial;
+    left: 50%;
+    width: 190vw;
+    height: 100%;
+    background: #FCF8FF;
+    border-radius: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, 0%) scale(2.5);
+}
+
+.item {
+    padding: 3em 0.5em;
+}
+
+.number {
+    border: 1px black solid;
+    display: inline-block;
+    padding: 0.8em;
+    margin: 0;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    font-family: 'Fraunces', serif;
+
+}
+
+@media (min-width: 700px) {
+    .items {
+        flex-direction: row; 
+        padding-bottom: 4em;
+    }
+
+    .insights {
+        margin-bottom: 9em;
+    }
+
+    .insights::before {
+
+        width: 900px;
+        transform: translate(-50%, 0%) scale(2.5);
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .insights::before {
+
+        width: 90vw;
+        transform: translate(-50%, 0%) scale(2.5);
+    }
+}
+
+.founder {
+    max-width: 80vw;
+    margin: auto 0;
+    width: auto;
+    height:auto;
+    /* transform: translate(0, 60px); */
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: -3.5em;
+    position: relative;
+    z-index: -1;
+}
+
+.call-to-action {
+    background-color: #24053E;
+    color: white;
+    padding: 2em 2em;
+    z-index: 1;
+}
+
+.call-to-action  h2 {
+    font-size: 2.25rem;
+}
+
+.call-to-action  p {
+    margin-bottom: 2em;
+}
+
+.be-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 700px) {
+    
+    .flexcont {
+        display: flex;
+        align-items: baseline;
+        max-width: 1114px;
+    }
+    
+    .founder {
+        max-width: 30vw;
+        width: 100%;
+        height: 100%;
+        
+        margin: 0;
+        margin-left: 2em;
+        /* transform: translateY(2em); */
+    }
+
+    .call-to-action {
+        margin-right: 2em;
+        margin-left: -5.25em;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .founder {
+        max-width: 420px;
+        width: 100%;
+        height: 100%;
+        
+        margin: 0;
+        /* margin-left: 8em; */
+        
+    }
+
+    .call-to-action {
+        /* margin-right: 8em; */
+        margin-left: -5.25em;
+        transform: translateY(-9em);
+    }
+
+}
+
+footer {
+    margin: 4em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social {
+    margin-top: 2em;
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Components                                 */
+/* -------------------------------------------------------------------------- */
+
+button {
+    margin: auto;
+    border: 0;
+    padding: 0.8rem 1rem;
+    background-color: #44FFA1;
+    color: #24053E;
+    font-family: 'Manrope', serif;
+    font-weight: 900;
+}
